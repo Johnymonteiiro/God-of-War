@@ -1,0 +1,48 @@
+ *,*::after, *::before{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+  
+    font-family: 'Nunito', sans-serif;
+}
+
+@import "Partial/colors";
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(12, 11, 32);
+}
+
+svg,img{
+    width: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+.border{
+    border: 1px solid red;
+}
+p{
+    font-size: 18px;
+    color:$white;
+    letter-spacing: 1px;
+    line-height: 140%;
+    padding-right: 60px;
+
+}
+.year> p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: $red;
+    padding: 0;
+}
+
+@import "Partial/layout";
+@import "Partial/menu";
+@import "Partial/animation";
+@import "Partial/spacing";
