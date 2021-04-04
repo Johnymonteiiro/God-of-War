@@ -24,13 +24,13 @@
     }
 }
 .title>.god{
-    margin-top: 50px;
+    margin-top: -20px;
 }
 
 .block-2 > img{
      width: 110%;
      height: 100%;
-     margin-top:-50px;
+     margin-top:-60px;
      transform: translate3d(-120px,0,0);
 
      @include responsive(){
@@ -44,13 +44,16 @@
     justify-content: space-between;
     align-items: center;
     max-width: 520px;
-    margin-top: 30px;
     width: 50%;
 
     @include responsive(){
         display: none;
     }
 
+}
+
+.items > svg{
+    margin-top: -20px;
 }
 
 .items-2{
@@ -165,12 +168,14 @@
     z-index: 1;
     top: 0;
     right: 0;
-    background: linear-gradient(  
-    rgba(11, 14, 26, 0.9));
     transition: 2s ease;
     overflow-x: hidden;
     padding-top: 60px;
     text-align:center;
+    background: linear-gradient(110deg, 
+    $blue-dark 20%, 
+    rgba(11, 12, 16, 0.80) 50%,
+    $blue-dark 80%);
   }
   
   .sidenav a {
@@ -216,12 +221,30 @@
 
   }
 
+  .grad{
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(110deg, 
+      $blue-dark 20%, 
+      rgba(11, 12, 16, 0.80) 50%,
+      $blue-dark 80%);
+
+      @include responsive(){
+        background: linear-gradient(110deg, 
+        $blue-dark 20%, 
+        rgba(11, 12, 16, 0.80) 50%,
+        $blue-dark 80%);
+    }
+  }
+
   
 .bg-video{
     position: absolute;
     top:0;
     left: 0;
-    z-index:-1;
+    z-index:-2;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -229,20 +252,7 @@
     justify-content: center;
     align-items: center;
 
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top:0;
-        left:0;
-        display:block;
-        background: linear-gradient(110deg, 
-        $blue-dark 20%, 
-        rgba(11, 12, 16, 0.80) 50%,
-        $blue-dark 80%);
-    }
-    
+  
 }
 
 .video{
